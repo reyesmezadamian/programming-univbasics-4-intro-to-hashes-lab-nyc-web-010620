@@ -24,13 +24,11 @@ def read_from_hash(hash, key)
 end
 
 def update_counting_hash (hash, key)
- n = 1
-  hash = {key => n}
-  if hash == {key => n}
-    puts hash [key] = n+1
+  if hash [key]
+  hash [key] += 1
+  return hash
   else
-    puts hash [key1] = 1 
-  end
-   puts hash
-   return hash
+  hash [key] = 1 
+  return hash
+ end
 end
